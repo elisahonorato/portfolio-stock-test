@@ -74,6 +74,7 @@ class TestPortfolio(unittest.TestCase):
         self.portfolio.add_stock(self.stock_a, 10, self.owner_id, datetime(2023, 1, 1))
         self.portfolio.remove_stock(self.stock_a, 5, self.owner_id)
         self.assertEqual(self.portfolio.get_quantity(self.stock_a), 5)
+        
 
     def test_remove_stock_by_non_owner(self):
         self.portfolio.add_stock(self.stock_a, 10, self.owner_id, datetime(2023, 1, 1))
